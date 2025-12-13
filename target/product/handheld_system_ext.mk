@@ -23,7 +23,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/media_system_ext.mk)
 # /system_ext packages
 PRODUCT_PACKAGES += \
     AccessibilityMenu \
-    $(if $(RELEASE_AVATAR_PICKER_APP), AvatarPicker,) \
+    AvatarPicker \
     Launcher3QuickStep \
     Provision \
     Settings \
@@ -31,3 +31,6 @@ PRODUCT_PACKAGES += \
     StorageManager \
     SystemUI \
     WallpaperCropper \
+
+# Allowlist for system packages included in handheld_system_ext.mk
+PRODUCT_PACKAGES += preinstalled_packages_handheld_system_ext.xml

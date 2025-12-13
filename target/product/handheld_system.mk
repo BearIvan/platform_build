@@ -66,13 +66,13 @@ PRODUCT_PACKAGES += \
     preinstalled-packages-platform-handheld-system.xml \
     PrintRecommendationService \
     PrintSpooler \
+    PrivateSpace \
     ProxyHandler \
     screenrecord \
     SecureElement \
     SharedStorageBackup \
     SimAppDialog \
     talkback \
-    Telecom \
     TeleService \
     Traceur \
     UserDictionaryProvider \
@@ -96,7 +96,15 @@ PRODUCT_SYSTEM_SERVER_APPS += \
     FusedLocation \
     InputDevices \
     KeyChain \
-    Telecom \
+
+ifneq ($(RELEASE_TELECOM_MAINLINE_MODULE),true)
+  PRODUCT_PACKAGES += \
+      Telecom \
+
+  PRODUCT_SYSTEM_SERVER_APPS += \
+      Telecom \
+
+endif
 
 PRODUCT_PACKAGES += framework-audio_effects.xml
 

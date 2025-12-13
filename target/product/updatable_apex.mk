@@ -17,6 +17,6 @@
 # com.android.apex.cts.shim.v1_prebuilt overrides CtsShimPrebuilt
 # and CtsShimPrivPrebuilt since they are packaged inside the APEX.
 PRODUCT_PACKAGES += com.android.apex.cts.shim.v1_prebuilt
-PRODUCT_SYSTEM_PROPERTIES := ro.apex.updatable=true
+PRODUCT_SYSTEM_PROPERTIES += ro.apex.updatable=true
 
-PRODUCT_COMPRESSED_APEX := false
+OVERRIDE_PRODUCT_COMPRESSED_APEX := false
